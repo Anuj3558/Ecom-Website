@@ -1,0 +1,114 @@
+@import "../../css-config/mixins.scss";
+.main_header {
+  
+    @include md{
+       padding: 0 40px;
+    }
+    width: 100%;
+    padding: 0 20px;
+    background-color: #212121;
+    color: white;
+    border-bottom: 1px solid rgb(0,0,0,0.1);
+    z-index: 99;
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include md{
+            height: 80px;
+        }
+        .left{
+         list-style: none;
+         display: none;
+         gap: 25px;
+         @include md{
+            display:flex ;
+         }
+         li{
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+         }
+        }
+        .center{
+            font-size: 22px;
+            font-weight: 700;
+            cursor: pointer;
+            @include md{
+                font-size: 34px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            @include md{
+                gap: 25px;
+                font-size: 24px;
+            }
+            svg{
+                font-size: 20px;
+                cursor: pointer;
+            }
+            
+            .cart_icon{
+                position: relative;
+                span{
+                    min-width: 20px;
+                    text-align: center;
+                    background-color: #8e2de2;
+                    padding: 2.5px;
+                    position: absolute;
+                    top: -5px;
+                    right:-12px;
+                    font-size: 12px;
+                    line-height: 1;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    &.sticky-header{
+        position: sticky;
+        top: 0;
+        transform: translateY(-80px);
+        animation: sticky-header 0.3s ease forwards;
+    
+    }
+    @keyframes sticky-header{
+     0%{
+        transform: translateY(-80px);
+     }
+     100%{
+        transform: translate(0);
+     }
+    }
+    /* Define scrollbar styles */
+// ::-webkit-scrollbar {
+//     width: 10px; /* Width of the scrollbar */
+//   }
+  
+//   /* Track styles */
+//   ::-webkit-scrollbar-track {
+//     background: #f1f1f1; /* Color of the track */
+//   }
+  
+//   /* Handle styles */
+//   ::-webkit-scrollbar-thumb {
+//     background: #888; /* Color of the scrollbar handle */
+//   }
+  
+//   /* Handle on hover */
+//   ::-webkit-scrollbar-thumb:hover {
+//     background: #555; /* Color of the scrollbar handle on hover */
+//   }
+  
+}

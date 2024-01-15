@@ -1,0 +1,48 @@
+# Node.js
+/node_modules
+
+# npm and Yarn lock files
+package-lock.json
+yarn.lock
+
+# macOS system files
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Compiled code and build artifacts
+/dist
+/build
+/out
+
+# Dependency folders for various languages
+/vendor/      # Go
+/venv/        # Python
+/node_modules/ # Node.js
+
+# Temporary files
+.tmp/
+.temp/
+
+# Environment-specific files
+.env
+.env.local
+
+# Logs and reports
+/log/
+/logs/
+/reports/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

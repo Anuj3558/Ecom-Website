@@ -1,0 +1,132 @@
+@import "../../../css-config/mixins.scss";
+.search-model{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    
+    background-color: rgba(0, 0, 0, 0.509);
+
+    .form-feild{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 50px;
+       
+        position: relative;
+        animation: slidesearch 0.2s ease;
+        @include md{
+            padding: 20px 0;
+        }
+        input{
+            width: 70%;
+            max-width: 120%;
+            height: 50px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: #212121;
+            outline: none;
+            border: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            @include md{
+                font-size: 20px;
+                height: 60px;
+            }
+        }
+        svg{
+            position: absolute;
+            font-size: 25px;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+
+        }
+    }
+    .search-res-content{
+        
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+
+        @include md{
+            max-width: 800px;
+        }
+        .search-result{
+            height: calc(100vh - 110px);
+            overflow: auto;
+            margin:0 20px ;
+            
+           
+            @include md{
+
+                height: calc(100vh - 160px);
+            }
+            .serch-result-item{
+            margin-right: 10px;
+                background-color: #000000;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 10px;
+                border-radius: 7px;
+                margin-top: 10px;
+                .img-continer{
+                    background-color: rgba(255, 255, 255, 0.445);
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 7px;
+                    flex-shrink: 0;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .prod-detiald{
+                        overflow:hidden;
+                        text-transform: uppercase;
+                        .prod-name{
+                           color: white;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            font-size: 16px;
+                            line-height: 1;
+                            margin-bottom: 10px;
+                            font-weight: 600;
+                            display: block;
+                            padding-right: 25px;
+                        }
+                        
+                    }
+                    
+                }
+                .prod-desc{
+                    font-size: 14px;
+                    line-height: 1;
+                    display: block;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    padding-top: 10px;
+                    color: #f5f5f5;
+                }   
+                
+            }
+        }
+
+    }
+    @keyframes slidesearch {
+        0%{
+            transform: translateY(-60%);
+        }
+        100%{
+            transform: translateY(0)
+        }
+        
+    }
+}

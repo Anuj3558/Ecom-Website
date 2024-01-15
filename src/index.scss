@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cabin", sans-serif;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+::-webkit-scrollbar {
+        width: 7px;
+        border-radius: 20px; /* Width of the scrollbar */
+      }
+      
+      /* Track styles */
+      ::-webkit-scrollbar-track {
+        background: #d5d6e1;
+        border-radius: 20px; /* Color of the track */
+      }
+      
+      /* Handle styles */
+      ::-webkit-scrollbar-thumb {
+        background: #8455d1;
+        border-radius: 20px; /* Color of the scrollbar handle */
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+        border-radius: 20px; /* Color of the scrollbar handle on hover */
+      }

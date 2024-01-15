@@ -1,0 +1,76 @@
+@import "../../css-config/mixins.scss";
+.footer{
+    /* Initially hide the element */
+
+  
+    width: 100%;
+    .footer-content{
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: wrap;
+        @include md{
+            justify-content: space-between;
+            padding: 50px 0;
+        }
+    }
+    .col{
+        width: 300px;
+        .title{
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .text{
+            color: rgb(0,0,0,0.5);
+            font-size: 14px;
+        }
+        .c-item{
+            margin: 0 20px;
+            display: flex;
+            margin-bottom: 10px ;
+            svg{
+                flex-shrink: 0;
+                font-size: 14px;
+                margin-right: 10px;
+                color: rgb(0,0,0,0.5 );
+            }
+        }
+        .text{
+            display: block;
+            cursor: pointer;
+        }
+    }
+    .bottom-bar{
+        border-top: 1px solid rgb(0,0,0,0.5 );
+        display: flex;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: rgb(0,0,0,0.5 );
+    }
+    
+
+}
+.lazy-load {
+    left: -70px;
+    visibility: 0;
+    animation: lazy-load 3s  alternate ;
+   
+     /* Add a transition for a smooth fade-in effect */
+  }
+  
+ @keyframes lazy-load{
+    0%{
+        position: relative;
+        left: 70px;
+        opacity: 0;
+    }
+    100%{
+       left: -70px;
+        opacity: 1;
+    }
+    
+}
